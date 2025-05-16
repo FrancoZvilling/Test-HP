@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-translate-key="pageTitle">Descrubre tu casa de Howgarts</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="top-bar">
+        <div class="time-widget">
+            <div id="time-display" class="widget-item">--:--:--</div>
+        </div>
+        <div class="controls">
+            <button id="language-toggle" class="control-btn" title="Change Language">
+                <i class="fas fa-globe"></i> <span id="lang-indicator">ES</span>
+            </button>
+            <button id="theme-toggle" class="control-btn" title="Toggle Dark/Light Mode">
+                <i class="fas fa-sun"></i> <!-- Icono cambia con JS -->
+            </button>
+        </div>
+    </div>
+
+    <div class="container">
+        <header>
+            <img src="img/sorting_hat.png" alt="Sombrero Seleccionador" id="sorting-hat-img">
+            <h1 data-translate-key="mainHeading">El Sombrero Seleccionador</h1>
+            <p data-translate-key="subHeading">Descubre a qué casa de Hogwarts perteneces.</p>
+        </header>
+
+        <main id="quiz-container">
+            <div id="question-area">
+                <h2 id="question-text" data-translate-key="loadingQuestion">Cargando pregunta...</h2>
+                <div id="answer-buttons" class="btn-grid">
+                    <!-- Los botones de respuesta se generarán aquí -->
+                </div>
+            </div>
+            <button id="start-button" class="btn action-btn" data-translate-key="startButton">Comenzar el Test</button>
+        </main>
+
+        <section id="result-container" class="hidden">
+            <!-- El contenido de este h2 se generará dinámicamente con JS -->
+            <h2></h2> 
+            <img id="result-house-crest" src="" alt="Escudo de la Casa">
+            <p id="result-house-description">Descripción de la casa...</p>
+            <div id="house-colors-banner"></div>
+            <button id="restart-button" class="btn action-btn" data-translate-key="restartButton">Hacer el test de nuevo</button>
+        </section>
+
+        <footer>
+            <p data-translate-key="footerText">© 2025 created by Franco Zvilling</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
